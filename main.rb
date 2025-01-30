@@ -5,22 +5,22 @@
 # => [0,2,2,3,4,78]
 
 def bubble_sort(items)
-  items_length = items.length
-  swap = 1
-  while swap == 1
-    swap = 0
-    for i in (1...items_length) do
-      item_temp = 0
-      if items[i-1] > items[i]
+  items_length = items.length   # variable to store array length
+  swap = true   # variable to store swap condition
+  while swap == true   # loop to keep swapping until swap is is false 
+    swap = false
+    for i in (1...items_length) do    # loop to go thru all items of array
+      item_temp = 0   # temporary item to store swap item swap(a,b) temp = a
+      if items[i-1] > items[i]    # check if items have to swap or not
         item_temp = items[i-1]
         items[i-1] = items[i]
         items[i] = item_temp
-        swap = 1
+        swap = true   # chnage swap condition to true
       end
     end
-    items_length = items_length - 1
+    items_length = items_length - 1   # if items have swapped then array length decreases by 1
   end
-  puts items
+  puts items    # print sorted array
 end
 
 arr = [4,3,78,2,0,2]
