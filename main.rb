@@ -7,12 +7,20 @@
 def bubble_sort(items)
   items_length = items.length
   items_sorted = []
-  swap = 1
-  for i in (1..items_length) do
-    if items[i-1] > items[i]
+  swap = 0
 
+  while swap != 0
+    swap = 0
+    for i in (1..items_length) do
+      item_temp = 0
+      if items[i-1] > items[i]
+        item_temp = items[i-1]
+        items[i-1] = items[i]
+        items[i] = item_temp
+        swap = 1
+      end
     end
-    print i
+    items_length = items_length - 1
   end
 end
 
