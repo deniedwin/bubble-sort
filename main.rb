@@ -5,16 +5,14 @@
 # => [0,2,2,3,4,78]
 
 def bubble_sort(items)
+  items_length = items.length
   items_sorted = []
   swap = 1
-  # while swap != 0
-    
-  # end
+  for i in (1..items_length) do
+    if items[i-1] > items[i]
 
-  items.each_with_index do |numi, i|
-    if numi > items[i+1]
-      puts "that"
     end
+    print i
   end
 end
 
